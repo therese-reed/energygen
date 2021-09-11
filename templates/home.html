@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <title>Australian Energy Generation</title>
+  </head>
+  <body>
+
+    <!-- Webpage header & navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+            <div class="container-fluid ">
+        <span class="navbar-brand mb-0 h1 fs-1">Australia's Energy Generation</span>
+      </div>
+    </nav>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-success p-1 text-dark bg-opacity-25">
+      <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link fs-5 fw-bolder" aria-current="page" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fs-5 fw-bolder" href="/about">About Data</a>
+        </li>
+      </ul>
+    </div>
+    </nav>
+
+  
+
+    <!-- Dropdown list for Category -->
+    <select id="resource-dd">
+      <option value="all">All</option>
+      <option value="non-renewable">Non-renewable</option>
+      <option value="renewable">Renewable</option>
+    </select>
+
+    <!-- Dropdown list for Fuel type -->
+    <select id="fuel_type-dd">
+      <option value="Black coal">Black coal</option>
+      <option value="Brown coal">Brown coal</option>
+      <option value="Natural gas">Natural gas</option>
+      <option value="Oil products">Oil products</option>
+      <option value="Other">Other</option>
+      <option value="Bagasse, wood">Bagasse, wood</option>
+      <option value="Biogas">Biogas</option>
+      <option value="Wind">Wind</option>
+      <option value="Hydro">Hydro</option>
+      <option value="Large-scale colar PV">Large-scale solar PV</option>
+      <option value="Small-scale solar PV">Small-scale solar PV</option>
+    </select>
+
+    <!-- Dropdown list for year  -->
+    <select id="year-dd">
+      <option value="1989-90">1989-90</option>
+      <option value="1990-91">1990-91</option>
+      <option value="1991-92">1991-92</option>
+      <option value="1992-93">1992-93</option>
+      <option value="1993-94">1993-94</option>
+      <option value="1994-95">1994-95</option>
+      <option value="1995-96">1995-96</option>
+      <option value="1996-97">1996-97</option>
+      <option value="1997-98">1997-98</option>
+      <option value="1998-99">1998-99</option>
+      <option value="1999-00">1999-00</option>
+      <option value="2000-01">2000-01</option>
+      <option value="2001-02">2001-02</option>
+      <option value="2002-03">2002-03</option>
+      <option value="2003-04">2003-04</option>
+      <option value="2004-05">2004-05</option>
+      <option value="2005-06">2005-06</option>
+      <option value="2006-07">2006-07</option>
+      <option value="2007-08">2007-08</option>
+      <option value="2008-09">2008-09</option>
+      <option value="2009-10">2009-10</option>
+      <option value="2010-11">2010-11</option> 
+      <option value="2011-12">2011-12</option> 
+      <option value="2012-13">2012-13</option> 
+      <option value="2013-14">2013-14</option> 
+      <option value="2014-15">2014-15</option> 
+      <option value="2015-16">2015-16</option> 
+      <option value="2016-17">2016-17</option> 
+      <option value="2017-18">2017-18</option> 
+      <option value="2018-19">2018-19</option> 
+      <option value="2019-20">2019-20</option> 
+    </select>
+
+    <div id="test">  </div>
+
+
+     <!-- Bootstrap Bundle with Popper --> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.0.1/d3.min.js" integrity="sha512-1e0JvdNhUkvFbAURPPlFKcX0mWu/b6GT9e0uve7BW4MFxJ15q4ZCd/Llz+B7/oh+qhw7/l6Q1ObPt6aAuR01+Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="{{url_for('static', filename='js/plots.js')}}"></script>
+   
+  </body>
+</html>
