@@ -12,17 +12,17 @@ d3.json("/api").then(data => {
         type: "bar"
       };
       
-      var yeargen = [trace1];
+      var data = [trace1];
       
       var layout = {
         title: "'Bar' Chart",
-        xaxis: { title: "Years"},
-        yaxis: { title: "Energy "}
+        xaxis: { title: "Drinks"},
+        yaxis: { title: "% of Drinks Ordered"}
       };
       
-      Plotly.newPlot("yeargen",layout);
+      Plotly.newPlot("plot", data, layout);
     console.log(data)
-// d3.select('#test').text("hello")
+
 })
 
 function onDDChange() {
